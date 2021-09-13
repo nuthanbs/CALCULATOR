@@ -1,0 +1,193 @@
+<html>
+<head>
+<style>
+
+body {
+				background-color : #461b7e;
+				
+				
+			}	
+				
+					
+		div.card1{
+					width : 400px;
+					
+					background-color :#f88017;
+					box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);
+					text-align:left;
+					margin: auto;
+					margin-bottom: 85%;
+					margin-top:15%;
+					opacity: 1;
+					}
+					
+		
+		
+		
+		div.header {
+					width : 650px;
+					background-color : white;
+					color : black;
+					padding : 20px;
+					font-size : 40px;
+					align="center"
+					background-position: center;
+					}
+		
+		
+					
+					
+		div.container {
+				padding :2px;
+				margin : auto;
+				}
+		
+			
+
+	
+  
+
+.buttons {
+  padding: 20px 20px 0 20px;
+}
+
+input[type=button] {
+  width: 60px;
+  height: 60px;
+  float: left;
+  padding: 0;
+  margin: 5px;
+  box-sizing: border-box;
+  background: #ecedef;
+  border: none;
+  font-size: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  font-weight: 700;
+  color: #5E5858;
+  cursor: pointer;
+  
+}
+input[type=text] {
+  width: 270px;
+  height: 60px;
+  float: center;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  color: #ffffff;
+  text-align: right;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0 25px;
+  
+}
+.red {
+  background: #FF0509 !important;
+  color: #ffffff !important;
+  
+}
+
+
+
+ 
+	
+	
+	
+	
+	
+	  </style>
+	
+</head>
+<body>
+
+
+<script>
+		function forclear() {
+      document.getElementById("output").innerHTML = "0";
+}
+
+function removeZero() {
+      var value = document.getElementById("output").innerHTML;
+      if (value == "0") {
+           value = " "
+           document.getElementById("output").innerHTML = value;
+      }
+}
+
+function perc() {
+      var value = document.getElementById("output").innerHTML;
+      value = value / 100;
+      document.getElementById("output").innerHTML = value;
+}
+
+
+function fordisplay(value) {
+      removeZero()
+      document.getElementById("output").innerHTML += value;
+	  }
+	  
+	  function solve() {
+     removeZero()
+     var equation = document.getElementById("output").innerHTML;
+     var solved = eval(equation);
+     document.getElementById('output').innerHTML = solved;
+}
+
+
+function Clear()                //CLEAR ENTRY
+ { Current = "0";
+   document.Calculator.Display.value = Current;
+ }
+
+function AllClear()             //Clear ALL entries!
+ { Current = "0";
+   Operation = 0;                //clear operation
+   Memory = "0";                  //clear memory
+   document.Calculator.Display.value = Current;
+ }
+
+</script>
+ 
+ <div class="card1"> <br/>
+	<table bgcolor="0c090a" width="300" height="150" cellpadding="5" cellspacing="3" border="1" align="center">
+	<tr>
+	 <th  colspan="5" align="center" style="color:white" >CALCULATOR</th>
+	 </tr>
+	<tr bgcolor="#ESE4E2"  style="font-size: 60px;" >
+	<th  colspan="5" width="150" height="120"  border="1"> <p id ="output" </p></th></tr>
+	
+	
+ <tr >
+	
+	<th bgcolor="#7d0552" style="color:black"><input  type="button"  name="b7" value="7" id="r1-1" onclick="fordisplay('7')"  align="center"/></th> 
+	<th bgcolor="#7d0552" style="color:black"><input  type="button"  name="b8" value="8" id="r1-2" onclick="fordisplay('8')" align="center"/></th> 
+	<th bgcolor="#7d0552" style="color:black"><input type="button"  name="b9" value="9" id="r1-3" onclick="fordisplay('9')" align="center"/></th> 
+	<th bgcolor="#151B54" style="color:black"><input type="button"   name="mulb" value="X" id="r1-4" onclick="fordisplay('*')" align="center"/></th> </tr>
+	
+	<tr> 
+	<th bgcolor="#7d0552" style="color:black"><input type="button"  name="b4 " value="4" id="r2-1" onclick="fordisplay('4')" align="center"/></th> 
+	<th bgcolor="#7d0552" style="color:black"><input type="button"  name="b5" value="5" id="r2-2" onclick="fordisplay('5')" align="center"/></th> 
+	<th bgcolor="#7d0552" style="color:black"><input type="button"  name="b6" value="6" id="r2-3" onclick="fordisplay('6')" align="center"/></th> 
+	<th bgcolor="#151B54" style="color:black" ><input type="button"  name="subb" value="-" id="r2-4" onclick="fordisplay('-')" align="center"/></th> </tr>
+	
+	<tr> 
+	<th bgcolor="#7d0552" style="color:black"><input type="button"  name="b1" value="1" id="r3-1" onclick="fordisplay('1')" align="center"/></th> 
+	<th bgcolor="#7d0552" style="color:black"><input type="button"  name="b2" value="2" id="r3-2" onclick="fordisplay('2')" align="center"/></th> 
+	<th bgcolor="#7d0552" style="color:black"><input type="button"  name="b3" value="3" id="r3-3" onclick="fordisplay('3')" align="center"/></th> 
+	<th bgcolor="#151B54" style="color:black" ><input type="button"  name="addb" value="+" id="r3-4" onclick="fordisplay('+')"  align="center"/></th> </tr>
+	
+	
+	<tr> 
+	<th bgcolor="#151B54" style="color:black"><input type="button"  name="divb" value="/" id="r4-1" onclick="fordisplay('/')"align="center"/></th> 
+	<th bgcolor="#7d0552" style="color:black"><input type="button"  name="b0" value="0" id="r4-2" onclick="fordisplay('0')" align="center"/></th> 
+	<th bgcolor="#151B54" style="color:black"><input type="button"  name="potb" value="." id="r4-3" onclick="fordisplay('.')"align="center"/></th> 
+	<th bgcolor="#151B54" style="color:black"> <input type="button" class="red" value="=" id="r4-4"  onClick="solve()"></th> </tr>
+	
+	<th  colspan="5" align="center" style="color:white" > Developed by : Nuthan B S</th>
+	</table>
+<br/>
+	</body>
+	</html>
